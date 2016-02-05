@@ -1,15 +1,94 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_add"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.administrator.prog3150_assignment1.AddFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <AbsoluteLayout
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="468dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:weightSum="1">
 
-    </AbsoluteLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="ADD DEBTOR"
+            android:id="@+id/AddDebtorView"
+            style="@style/DefaultTextView"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:inputType="textPersonName"
+            android:text=""
+            android:ems="10"
+            android:id="@+id/AddFirstNameView"
+            style="@style/DefaultTextView"
+            android:hint="@string/AddFirstNameView" />
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:inputType="textPersonName"
+            android:text=""
+            android:ems="10"
+            android:id="@+id/AddLastNameView"
+            android:hint="@string/AddLastNameView"
+            style="@style/DefaultTextView" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/AddPhoneNumberView"
+            style="@style/DefaultTextView"
+            android:hint="@string/AddPhoneNumberView" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/AddEmailView"
+            style="@style/DefaultTextView"
+            android:hint="@string/AddEmailView" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/AddPaymentAmountView"
+            android:hint="@string/AddPaymentAmountView"
+            style="@style/DefaultTextView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0sp"
+            android:id="@+id/AddDateButton"
+            android:text="@string/AddDateView"
+            style="@style/DefaultTextView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0sp"
+            android:text="@string/AddDebtorView"
+            android:id="@+id/AddDebtorButton"
+            style="@style/DefaultTextView" />
+    </LinearLayout>
 </FrameLayout>

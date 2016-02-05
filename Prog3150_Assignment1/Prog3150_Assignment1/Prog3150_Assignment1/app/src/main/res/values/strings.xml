@@ -8,4 +8,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="AddFirstNameView">Firstname:</string>
+    <string name="AddLastNameView">Lastname:</string>
+    <string name="AddDebtorButtonText">Add Debtor</string>
+    <string name="AddPhoneNumberView">Phone Number</string>
+    <string name="AddEmailView">Email</string>
+    <string name="AddDateView">Pick Pay Date</string>
+    <string name="AddPaymentAmountView">Amount Owed</string>
+    <string name="AddDebtorView">Add Debtor</string>
 </resources>
