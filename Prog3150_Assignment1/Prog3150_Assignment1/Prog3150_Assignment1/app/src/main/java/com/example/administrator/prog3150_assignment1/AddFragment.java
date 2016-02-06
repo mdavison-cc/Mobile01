@@ -73,7 +73,7 @@ public class AddFragment extends Fragment  {
                 email = EditEmail.getText().toString();
                 amount = EditAmount.getText().toString();
 
-                if((firstName != "")&(lastName != "")&(number != "")&(email != "")&(amount != ""))
+                if((firstName != " ")&&(lastName != " ")&&(number != " ")&&(email != " ")&&(amount != " "))
                 {
                     try{
                         ((AddFragmentInterface) activity).OnAddDebtor(firstName, lastName, number, email, amount, theYear, theMonth, theDay);

@@ -22,6 +22,12 @@ import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
+import java.sql.Connection;
+import java.util.HashSet;
+import java.util.Set;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, AddFragment.AddFragmentInterface {
 
@@ -32,6 +38,7 @@ public class MainActivity extends AppCompatActivity
     Button dateDialogButton;
     int dateDialogId = 0;
     int theYear, theMonth, theDay;
+    int key = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -141,6 +148,30 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void OnAddDebtor(String firstName, String lastName, String number, String email, String amount, int year, int month, int day) {
         Toast.makeText(MainActivity.this, firstName + " " + lastName + " " + number + " " + email + " " +  amount, Toast.LENGTH_SHORT).show();
+        key++;
 
+        SharedPreferences.Editor edit = data.edit();
+
+        String Date = Integer.toString(year) + Integer.toString(month) + Integer.toString(day);
+        Debtor debtor = new Debtor(firstName, lastName, number, email, Date, amount);
+        Gson gson = new Gson();
+        edit.putString(Integer.toString(key), gson.toJson(debtor));
+        edit.commit();
+
+
+
+
+    }
+
+
+    public SharedPreferences GetData()
+    {
+        return data;
+    }
+
+
+    public int GetKey()
+    {
+        return key;
     }
 }
