@@ -5,16 +5,37 @@
     tools:context="com.example.administrator.prog3150_assignment1.PayFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="PAY" />
+        android:layout_height="408dp"
+        android:layout_gravity="center">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PAY"
-        android:id="@+id/button2"
-        android:layout_gravity="center" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/PayDebtorsView"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            style="@style/DefaultTextView" />
 
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/searchView"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:queryHint="@string/SearchViewHint"
+            style="@style/DefaultTextView" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/searchView"></LinearLayout>
+    </RelativeLayout>
 </FrameLayout>

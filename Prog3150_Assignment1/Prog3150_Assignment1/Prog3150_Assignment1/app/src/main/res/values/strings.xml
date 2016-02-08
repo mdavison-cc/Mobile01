@@ -16,4 +16,6 @@
     <string name="AddDateView">Pick Pay Date</string>
     <string name="AddPaymentAmountView">Amount Owed</string>
     <string name="AddDebtorView">Add Debtor</string>
+    <string name="PayDebtorsView">Pay Debt</string>
+    <string name="SearchViewHint">Firstname and Lastname</string>
 </resources>
